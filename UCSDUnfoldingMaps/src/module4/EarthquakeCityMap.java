@@ -186,7 +186,21 @@ public class EarthquakeCityMap extends PApplet {
 	private void printQuakes() 
 	{
 		// TODO: Implement this method
-		
+		int counter, counterLandQuake;
+		counterLandQuake = 0;
+		for(Marker countrymarker : countryMarkers){
+			counter = 0;
+			for(Marker quakemarker : quakeMarkers){
+				if(quakemarker.getProperty("country")==countrymarker.getProperty("name")){
+					counter = counter+1;
+				}
+			}
+			if(counter > 0){
+				System.out.println("There were " + counter + " quakes in the country " + countrymarker.getProperty("name") );
+			}
+			counterLandQuake = counter + counterLandQuake;
+		}
+		System.out.println("There were " + (quakeMarkers.size() - counterLandQuake) + " quakes in the ocean" );
 	}
 	
 	
