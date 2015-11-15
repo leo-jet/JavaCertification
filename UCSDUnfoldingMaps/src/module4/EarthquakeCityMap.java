@@ -163,6 +163,13 @@ public class EarthquakeCityMap extends PApplet {
 	private boolean isLand(PointFeature earthquake) {
 		
 		// IMPLEMENT THIS: loop over all countries to check if location is in any of them
+		for(Marker countrymarker: countryMarkers){
+			if(isInCountry(earthquake, countrymarker)){
+				
+				//earthquake is inside some country
+				return true;
+			}
+		}
 		
 		// TODO: Implement this method using the helper method isInCountry
 		
@@ -179,6 +186,7 @@ public class EarthquakeCityMap extends PApplet {
 	private void printQuakes() 
 	{
 		// TODO: Implement this method
+		
 	}
 	
 	

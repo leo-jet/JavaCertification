@@ -86,8 +86,36 @@ public class EarthquakeCityMap extends PApplet {
 	    // Here is an example of how to use Processing's color method to generate 
 	    // an int that represents the color yellow.  
 	    int yellow = color(255, 255, 0);
+	    int blue = color(8, 41, 250);
+	    int red = color(250, 197, 98);
 	    
 	    //TODO: Add code here as appropriate
+	    
+	    //initialize the list of markers
+	    for(PointFeature point : earthquakes){
+	    	markers.add(new SimplePointMarker(point.getLocation(), point.getProperties()));
+	    }
+	    
+	    System.out.println(markers.get(0).getLocation());
+	    
+	    //add markers in the map
+	    map.addMarkers(markers);
+	    
+	    //change color of marker according to magnitude
+	    for(Marker marker : markers){
+	    	Object magObj = marker.getProperty("magnitude");
+	    	float mag = Float.parseFloat(magObj.toString());
+	    	if(mag < 4.0){
+	    		marker.setColor(red);
+	    	}
+	    	if((mag >= 4.0)||(mag < 5.0)){
+	    		marker.setColor(blue);
+	    	}
+	    	if(mag >= 5.0){
+	    		marker.setColor(yellow);
+	    	}
+	    
+	    }
 	}
 		
 	// A suggested helper method that takes in an earthquake feature and 
