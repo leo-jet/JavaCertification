@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.9" icons="true">  
+  <object id="1" language="java" name="module4.CityMarker" project="UCSDUnfoldingMaps" 
+    file="/UCSDUnfoldingMaps/src/module4/CityMarker.java" binary="false" label="cityMarker" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="232" y="0"/>  
+  </object>  
+  <object id="2" language="java" name="module4.EarthquakeCityMap" project="UCSDUnfoldingMaps" 
+    file="/UCSDUnfoldingMaps/src/module4/EarthquakeCityMap.java" binary="false" label="earthquakeCityMap" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="409" y="0"/>  
+  </object>  
+  <object id="3" language="java" name="module4.EarthquakeMarker" project="UCSDUnfoldingMaps" 
+    file="/UCSDUnfoldingMaps/src/module4/EarthquakeMarker.java" binary="false" label="earthquakeMarker" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="567" y="0"/>  
+  </object>  
+  <object id="4" language="java" name="module4.LandQuakeMarker" project="UCSDUnfoldingMaps" 
+    file="/UCSDUnfoldingMaps/src/module4/LandQuakeMarker.java" binary="false" label="landQuakeMarker" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="633" y="0"/>  
+  </object>  
+  <object id="5" language="java" name="module4.OceanQuakeMarker" project="UCSDUnfoldingMaps" 
+    file="/UCSDUnfoldingMaps/src/module4/OceanQuakeMarker.java" binary="false" label="oceanQuakeMarker" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="725" y="0"/>  
+  </object>
+</sequence-diagram>
