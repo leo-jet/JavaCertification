@@ -2,6 +2,7 @@ package module4;
 
 import de.fhpotsdam.unfolding.data.PointFeature;
 import processing.core.PGraphics;
+import processing.core.*;
 
 /** Implements a visual marker for land earthquakes on an earthquake map
  * 
@@ -28,6 +29,14 @@ public class LandQuakeMarker extends EarthquakeMarker {
 		// DO NOT set the fill color here.  That will be set in the EarthquakeMarker
 		// class to indicate the depth of the earthquake.
 		// Simply draw a centered circle.
+		float size;
+		if(this.getMagnitude()<4.5){
+			size = 10;
+		}
+		else{
+			size = 15;
+		}
+		pg.ellipse(x,y, size, size);
 		
 		// HINT: Notice the radius variable in the EarthquakeMarker class
 		// and how it is set in the EarthquakeMarker constructor
